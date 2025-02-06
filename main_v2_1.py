@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import webbrowser
+from datetime import datetime
 
 # Função para verificar se o canal está online a partir da página da Twitch
 def is_channel_online(channel_name):
@@ -23,37 +24,52 @@ def is_channel_online(channel_name):
 def monitor_channel(channel_name):
     while True:
         online_status = is_channel_online(channel_name)
+        timestamp = datetime.now().strftime('%d/%m/%Y %H:%M')
         if online_status:
-            print(f"O canal {channel_name} está online no momento.")
+            print(f"[{timestamp}] O canal {channel_name} está online no momento.")
             webbrowser.open(f"https://www.twitch.tv/{channel_name}")
             break
         else:
-            print(f"O canal {channel_name} está offline no momento. Verificando novamente em 5 minutos...")
+            print(f"[{timestamp}] O canal {channel_name} está offline no momento. Verificando novamente em 5 minutos...")
             time.sleep(300)  # Esperar 5 minutos antes de verificar novamente
 
 # Função para assistir ao canal e verificar se ele fica offline
 def watch_channel(channel_name):
     while True:
         online_status = is_channel_online(channel_name)
+        timestamp = datetime.now().strftime('%d/%m/%Y %H:%M')
         if not online_status:
-            print(f"O canal {channel_name} ficou offline. Encerrando o navegador.")
+            print(f"[{timestamp}] O canal {channel_name} ficou offline. Encerrando o navegador.")
             break
         else:
-            print(f"O canal {channel_name} ainda está online. Verificando novamente em 5 minutos...")
+            print(f"[{timestamp}] O canal {channel_name} ainda está online. Verificando novamente em 5 minutos...")
             time.sleep(300)  # Esperar 5 minutos antes de verificar novamente
 
 
-# Leia com atenção!
 
 
 #channel_name = input("Digite o nome do canal que você quer monitorar: ")
 
 channel_name = 'Luizdngomes'
 
-"""
-Para fixar o canal a monitorar basta descomentar o channel_name e inserir entre as aspas o nome do canal
+# Leia com atenção!
 
-Para ser questionado toda vez, channel_name = input deve estar descomentado e o channel_name = 'Luizdngomes' deve estar comentado
+"""
+
+Para fixar o canal a monitorar:
+
+#channel_name = input("Digite o nome do canal que você quer monitorar: ")
+
+channel_name = 'nome do canal'
+
+------------------------------------------------
+
+Para ser questionado toda vez:
+
+channel_name = input("Digite o nome do canal que você quer monitorar: ")
+
+#channel_name = 'Luizdngomes'
+
 
 """
 

@@ -26,7 +26,24 @@ To do:
 >> Verifica a cada 5 minutos se o canal ainda está online.
 >> Se o canal ficar offline, encerra o navegador e avisa ao usuário.
 
-OBS: 
-# Para fixar o canal a monitorar basta descomentar o channel_name e inserir entre as aspas o nome do canal
+>main_v2.py:
 
-# Para ser questionado toda vez, channel_name = input deve estar descomentado e o channel_name = 'Luizdngomes' deve estar comentado
+>> Correção para aparecer o dia e hora a cada prompt
+>> Melhorias nos comentários
+
+
+OBS: 
+
+>>Para fixar o canal a monitorar:
+
+>>>#channel_name = input("Digite o nome do canal que você quer monitorar: ")
+
+>>>channel_name = 'nome do canal'
+
+------------------------------------------------
+
+>>Para ser questionado toda vez:
+
+>>>channel_name = input("Digite o nome do canal que você quer monitorar: ")
+
+>>>#channel_name = 'Luizdngomes'
