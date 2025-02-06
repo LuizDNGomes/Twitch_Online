@@ -26,7 +26,7 @@ To do:
 > Verifica a cada 5 minutos se o canal ainda está online.
 > Se o canal ficar offline, encerra o navegador e avisa ao usuário.
 
-# main_v2.py:
+# main_v2_1.py:
 
 > Correção para aparecer o dia e hora a cada prompt
 > Melhorias nos comentários
