@@ -7,7 +7,7 @@ Verifica se o canal está online com base nos metadados do arquivo.
 Exibe o status do canal (online ou offline).
 
 To do:
-# Pensando
+#Pensando...
  
 # main_v1.py:
 
@@ -25,12 +25,14 @@ To do:
 > Se o canal estiver online, abre o navegador e começa a assistir ao canal.
 > Verifica a cada 5 minutos se o canal ainda está online.
 > Se o canal ficar offline, encerra o navegador e avisa ao usuário.
+----------------------------------------------------------------------
 
 # main_v2_1.py:
 
 > Correção para aparecer o dia e hora a cada prompt
 > Melhorias nos comentários
 
+----------------------------------------------------------------------
 
 OBS: 
 
