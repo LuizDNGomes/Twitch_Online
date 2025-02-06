@@ -7,7 +7,8 @@ Verifica se o canal está online com base nos metadados do arquivo.
 Exibe o status do canal (online ou offline).
 
 To do:
-#Pensando...
+
+>Fechar a guia caso o canal fique offline
  
 # main_v1.py:
 
