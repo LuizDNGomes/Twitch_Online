@@ -6,7 +6,27 @@ Extrai o nome do streamer do conteúdo do arquivo.
 Verifica se o canal está online com base nos metadados do arquivo.
 Exibe o status do canal (online ou offline).
 
-To do
+To do:
+#Pensando
+ 
+>main_v1.py:
 
->Analisa os Drops e abre no navegador padrão para contar os drops
->Fecha a página se identificar que o canal está offline
+>> Nessa versão o código apenas informa se o canal está ou não online
+>> Se sim ou se não, ele informa ao usuário o status e pede um novo canal
+>> Se o usuário digitar 'sair', o programa encerra
+----------------------------------------------------------------------
+
+>main_v2.py:
+
+
+>> Pergunta ao usuário o nome do canal que ele quer monitorar.
+>> Acessa a página da Twitch do canal especificado.
+>> Analisa o conteúdo da página para encontrar os metadados que indicam se o canal está online.
+>> Se o canal estiver online, abre o navegador e começa a assistir ao canal.
+>> Verifica a cada 5 minutos se o canal ainda está online.
+>> Se o canal ficar offline, encerra o navegador e avisa ao usuário.
+
+OBS: 
+# Para fixar o canal a monitorar basta descomentar o channel_name e inserir entre as aspas o nome do canal
+
+# Para ser questionado toda vez, channel_name = input deve estar descomentado e o channel_name = 'Luizdngomes' deve estar comentado
